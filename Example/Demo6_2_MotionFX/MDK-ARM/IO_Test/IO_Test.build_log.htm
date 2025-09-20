@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.41.0.0
+Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Admin Administrator, Admin, LIC=NQQMA-1IPSR-30XNC-72ZYZ-CYLS9-18VGT
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.41.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.22
+Assembler:       Armasm.exe V6.22
+Linker/Locator:  ArmLink.exe V6.22
+Library Manager: ArmAr.exe V6.22
+Hex Converter:   FromElf.exe V6.22
+CPU DLL:         SARMCM3.DLL V5.41.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      CMSIS_AGDI.dll V1.33.21.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+E:\Desktop\NEW_TEST\G4_Demo\Demo6_2_MotionFX\MDK-ARM\IO_Test.uvprojx
+Project File Date:  07/28/2025
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.22', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'IO_Test'
+../Core/Src/main.c(117): warning: passing 'char[20]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  117 |   CDC_Transmit_FS("Disable_ESP32_C3:OK",19);
+      |                   ^~~~~~~~~~~~~~~~~~~~~
+../USB_Device/App\usbd_cdc_if.h(109): note: passing argument to parameter 'Buf' here
+  109 | uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
+      |                                  ^
+../Core/Src/main.c(118): warning: passing 'uint8_t[100]' (aka 'unsigned char[100]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  118 |   sprintf(printf_Buf,"Disable_ESP32_C3:OK");
+      |           ^~~~~~~~~~
+C:\Keil_v5\ARM\ARMCLANG\bin\..\include\stdio.h(417): note: passing argument to parameter here
+  417 | extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+      |                                                   ^
+../Core/Src/main.c(122): warning: passing 'char[20]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  122 |         CDC_Transmit_FS("LSM6DSO Init Failed",19);
+      |                         ^~~~~~~~~~~~~~~~~~~~~
+../USB_Device/App\usbd_cdc_if.h(109): note: passing argument to parameter 'Buf' here
+  109 | uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
+      |                                  ^
+../Core/Src/main.c(123): warning: passing 'uint8_t[100]' (aka 'unsigned char[100]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  123 |         sprintf(printf_Buf,"LSM6DSO Init Failed");
+      |                 ^~~~~~~~~~
+C:\Keil_v5\ARM\ARMCLANG\bin\..\include\stdio.h(417): note: passing argument to parameter here
+  417 | extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+      |                                                   ^
+../Core/Src/main.c(128): warning: passing 'char[19]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  128 |         CDC_Transmit_FS("LSM6DSO Set Failed",18);
+      |                         ^~~~~~~~~~~~~~~~~~~~
+../USB_Device/App\usbd_cdc_if.h(109): note: passing argument to parameter 'Buf' here
+  109 | uint8_t CDC_Transmit_FS(uint8_t* Buf, uint16_t Len);
+      |                                  ^
+../Core/Src/main.c(129): warning: passing 'uint8_t[100]' (aka 'unsigned char[100]') to parameter of type 'char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  129 |         sprintf(printf_Buf,"LSM6DSO Set Failed");
+      |                 ^~~~~~~~~~
+C:\Keil_v5\ARM\ARMCLANG\bin\..\include\stdio.h(417): note: passing argument to parameter here
+  417 | extern _ARMABI int sprintf(char * __restrict /*s*/, const char * __restrict /*format*/, ...) __attribute__((__nonnull__(1,2)));
+      |                                                   ^
+6 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=106600 RO-data=1796 RW-data=388 ZI-data=23564  
+FromELF: creating hex file...
+"IO_Test\IO_Test.axf" - 0 Error(s), 6 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
+                ARM::CMSIS@6.1.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.1.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32G4xx_DFP.2.0.0.pack
+                Keil::STM32G4xx_DFP@2.0.0
+                STMicroelectronics STM32G4 Series Device Support
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_IO_Test
+  C:/Keil_v5/ARM/CMSIS/6.1.0/CMSIS/Core/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE@6.1.0
+      Include file:  CMSIS/Core/Include/tz_context.h
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
